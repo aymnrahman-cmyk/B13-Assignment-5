@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+
+    <!-- Tailwind + DaisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F8FAFC]">
+        <div class="py-6">
+        <fieldset class="fieldset bg-white shadow border-base-300 rounded-box w-[520px] border p-4 mx-auto">
+        <img src="./assets/github-logo.png" class="mx-auto mt-[32px]" alt="">
+        <div class="mx-auto mt-6">
+            <p class="text-center font-semibold text-2xl">GitHub Issues Tracker</p>
+            <p class="text-[16px] text-[#64748B] text-center">Sign in to manage your issues</p>
+        </div>
+
+        <div class="w-full space-y-1 mt-6">
+            <label class="label text-[16px] text-black">Username</label><br>
+        <input id="username" type="email" class="input w-full" placeholder="Enter Username" />
+        <p class="text-[14px] text-[#4A00FF]">Default: admin</p>
+
+        <label class="label text-[16px] text-black">Password</label><br>
+        <input id="password" type="password" class="input w-full" placeholder="Enter Password" />
+        <p class="text-[14px] text-[#4A00FF]">Default: admin123</p>
+        </div>
+        
+        <button class="btn btn-primary mt-4" onclick="handleLogin()">Sign In</button>
+        <p class="mx-auto text-[16px] mt-[15px]">OR</p>
+
+        <p class="text-[16px] text-[#64748B] text-center">Demo Credentials:</p>
+        <div class="bg-[#F8FAFC] text-center py-6 rounded">
+            <p class="text-black"><span class="font-semibold">Username: </span>admin</p>
+            <p class="text-black"><span class="font-semibold">Password: </span>admin123</p>
+        </div>
+    </fieldset>
+    </div>
+
+    
+    <!-- stylesheet -->
+     <link rel="stylesheet" href="./styles/style.css">
+
+     <!-- js  -->
+      <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+
+    <!-- Tailwind + DaisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F8FAFC]">
+    <div class="bg-white navbar bg-base-100 shadow-sm">
+    <div class="navbar-start space-x-1 ml-[80px]">
+        <img src="./assets/github-logo.png" alt="" class="w-9">
+        <p class="text-2xl font-semibold">GitHub Issues Tracker</p>
+    </div>
+    
+    <div class="navbar-end mr-[80px] space-x-2">
+        <label class="input">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <circle cx="11" cy="11" r="8"></circle>
+      <path d="m21 21-4.3-4.3"></path>
+    </g>
+  </svg>
+  <input type="search" required placeholder="Search issues..." />
+</label>
+        <a class="btn btn-primary">+ New Issue</a>
+    </div>
+    </div>
+
+    <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow">
+        <button class="btn btn-primary">All</button>
+        <button class="btn">Open</button>
+        <button class="btn">Closed</button>
+    </div>
+
+    <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow flex items-center space-x-1">
+        <div class=" bg-[#ECE4FF] rounded-full p-1">
+            <img src="./assets/Aperture.png" alt="">
+        </div>
+        <div>
+            <p class="font-semibold text-[20px]"><span id="issues">50</span> Issues</p>
+            <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
+        </div>
+
+        <div class="navbar-end translate-x-45">
+            <div class="flex space-x-4">
+                <p>Open</p>
+                <p>Closed</p>
+            </div>
+        </div>
+
+        <div class="bg-[#FBFBFB]">
+            
+        </div>
+    </div>
+    
+    <!-- stylesheet -->
+     <link rel="stylesheet" href="./styles/style.css">
+</body>
+</html>
