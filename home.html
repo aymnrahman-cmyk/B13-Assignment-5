@@ -43,9 +43,9 @@
     </div>
 
     <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow">
-        <button class="btn btn-primary">All</button>
-        <button class="btn">Open</button>
-        <button class="btn">Closed</button>
+        <button class="btn font-normal bg-white hover:bg-indigo-700 text-[#64748B] hover:text-white">All</button>
+        <button class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Open</button>
+        <button class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Closed</button>
     </div>
 
     <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow flex items-center space-x-1">
@@ -57,16 +57,36 @@
             <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
         </div>
 
-        <div class="navbar-end translate-x-45">
-            <div class="flex space-x-4">
+        <div class="navbar-end m-0 ml-45">
+            <div class="md:flex space-x-4">
                 <p>Open</p>
                 <p>Closed</p>
             </div>
         </div>
-
-        <div class="bg-[#FBFBFB]">
-
         </div>
+    </div>
+
+    <div id="all-issues-container" class="bg-[#FBFBFB] mx-auto p-6 grid grid-cols-1 w-11/12 md:grid-cols-2 lg:grid-cols-4">
+        <!-- <div class="issue-card bg-white p-4 rounded space-y-3 m-1">
+            <div class="flex justify-between">
+                <div class="flex">
+                <img src="./assets/Open-Status.png" alt="" class="">
+                <img src="./assets/Closed- Status .png" alt="" class="">
+                </div>
+                <p class="bg-red-300 text-red-600 rounded-full px-3 outline">High</p>
+            </div>
+            <div class="space-y-3">
+                <p class="font-semibold">Fix navigation menu on mobile devices</p>
+                <p class="text-[16px] text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices...</p>
+            </div>
+            <div class="flex space-x-2">
+                <p class="bg-red-300 text-red-600 rounded-full px-3 outline">BUG</p>
+                <p class="bg-orange-300 text-orange-600 rounded-full px-3 outline">HELP WANTED</p>
+            </div>
+            <hr>
+            <p class="text-[16px] text-[#64748B]">#1 by john_doe</p>
+            <p class="text-[16px] text-[#64748B]">1/15/2024</p>
+        </div> -->
     </div>
     
     <!-- stylesheet -->
