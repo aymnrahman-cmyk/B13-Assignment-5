@@ -43,9 +43,9 @@
     </div>
 
     <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow">
-        <button class="btn font-normal bg-white hover:bg-indigo-700 text-[#64748B] hover:text-white">All</button>
-        <button class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Open</button>
-        <button class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Closed</button>
+        <button id="btn-all" class="btn font-normal bg-white hover:bg-indigo-700 text-[#64748B] hover:text-white">All</button>
+        <button id="btn-open" class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Open</button>
+        <button id="btn-closed" class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Closed</button>
     </div>
 
     <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow flex items-center space-x-1">
@@ -66,7 +66,7 @@
         </div>
     </div>
 
-    <div id="all-issues-container" class="bg-[#FBFBFB] mx-auto p-6 grid grid-cols-1 w-11/12 md:grid-cols-2 lg:grid-cols-4">
+    <div id="all-issues-container" class="bg-[#FBFBFB] mx-auto p-6 grid grid-cols-1 w-11/12 md:grid-cols-2 lg:grid-cols-4 ">
         <!-- <div class="issue-card bg-white p-4 rounded space-y-3 m-1">
             <div class="flex justify-between">
                 <div class="flex">
@@ -88,6 +88,14 @@
             <p class="text-[16px] text-[#64748B]">1/15/2024</p>
         </div> -->
     </div>
+
+    <dialog id="issue-modal" class="modal">
+        <div class="modal-box w-11/12 max-w-2xl" id="modal-content">
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
     
     <!-- stylesheet -->
      <link rel="stylesheet" href="./styles/style.css">
