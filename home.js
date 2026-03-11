@@ -11,6 +11,8 @@ let allIssues = [];
 
 const displayIssues= (issues) => {
     const allIssueContainer= document.getElementById("all-issues-container"); 
+    showSpinner();
+    setTimeout(() => { 
     allIssueContainer.innerHTML = "";
     document.getElementById("issues-numbers").textContent = issues.length;
 // // "id": 1,
@@ -55,7 +57,8 @@ const displayIssues= (issues) => {
 
         issueDiv.addEventListener("click", () => openIssueModal(issue.id));
         issueDiv.className = "h-full cursor-pointer";
-    }
+    };
+    }, 200);
 };
 
 const setActiveButton = (activeId) => {
@@ -123,3 +126,10 @@ document.getElementById("search-input").addEventListener("input", (e) => {
         .then(json => displayIssues(json.data));
 });
 
+const showSpinner = () => {
+    document.getElementById("all-issues-container").innerHTML = `
+        <div class="col-span-4 flex justify-center items-center py-20">
+            <span class="loading loading-spinner loading-lg text-indigo-700"></span>
+        </div>
+    `;
+};
