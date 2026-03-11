@@ -12,6 +12,7 @@ let allIssues = [];
 const displayIssues= (issues) => {
     const allIssueContainer= document.getElementById("all-issues-container"); 
     allIssueContainer.innerHTML = "";
+    document.getElementById("issues-numbers").textContent = issues.length;
 // // "id": 1,
 //       "title": "Fix navigation menu on mobile devices",
 //       "description": "The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.",
@@ -57,15 +58,27 @@ const displayIssues= (issues) => {
     }
 };
 
+const setActiveButton = (activeId) => {
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.remove("!bg-indigo-700", "!text-white");
+        btn.classList.add("!bg-white", "!text-[#64748B]");
+    });
+    document.getElementById(activeId).classList.remove("!bg-white", "!text-[#64748B]");
+    document.getElementById(activeId).classList.add("!bg-indigo-700", "!text-white");
+};
+
 document.getElementById("btn-all").addEventListener("click", () => {
+    setActiveButton("btn-all");
     displayIssues(allIssues);
 });
 
 document.getElementById("btn-open").addEventListener("click", () => {
+    setActiveButton("btn-open");
     displayIssues(allIssues.filter(issue => issue.status === "open"));
 });
 
 document.getElementById("btn-closed").addEventListener("click", () => {
+    setActiveButton("btn-closed");
     displayIssues(allIssues.filter(issue => issue.status === "closed"));
 });
 
@@ -96,3 +109,17 @@ const openIssueModal = (id) => {
             document.getElementById("issue-modal").showModal();
         });
 };
+
+document.getElementById("search-input").addEventListener("input", (e) => {
+    const searchText = e.target.value.trim();
+    
+    if (searchText === "") {
+        displayIssues(allIssues); 
+        return;
+    }
+
+    fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`)
+        .then(res => res.json())
+        .then(json => displayIssues(json.data));
+});
+

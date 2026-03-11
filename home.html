@@ -36,16 +36,16 @@
       <path d="m21 21-4.3-4.3"></path>
     </g>
   </svg>
-  <input type="search" required placeholder="Search issues..." />
+  <input id="search-input" type="search" required placeholder="Search issues..." />
 </label>
         <a class="btn btn-primary">+ New Issue</a>
     </div>
     </div>
 
     <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow">
-        <button id="btn-all" class="btn font-normal bg-white hover:bg-indigo-700 text-[#64748B] hover:text-white">All</button>
-        <button id="btn-open" class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Open</button>
-        <button id="btn-closed" class="btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Closed</button>
+        <button id="btn-all" class="filter-btn btn font-normal bg-white hover:bg-indigo-700 text-[#64748B] hover:text-white">All</button>
+        <button id="btn-open" class="filter-btn btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Open</button>
+        <button id="btn-closed" class="filter-btn btn font-normal bg-white text-[#64748B] hover:bg-indigo-700 hover:text-white">Closed</button>
     </div>
 
     <div class="all-open-closed w-11/12 bg-white mx-auto p-6 mt-14 rounded shadow flex items-center space-x-1">
@@ -53,7 +53,7 @@
             <img src="./assets/Aperture.png" alt="">
         </div>
         <div>
-            <p class="font-semibold text-[20px]"><span id="issues">50</span> Issues</p>
+            <p class="font-semibold text-[20px]"><span id="issues-numbers">50</span> Issues</p>
             <p class="text-[16px] text-[#64748B]">Track and manage your project issues</p>
         </div>
 
